@@ -17,8 +17,8 @@ void InsertTrackIdent(RaceModeOnlineVs *RaceModeOnlineVs) {
 }
 
 void CheckTrackIdent() {
-    if(DWC_IsServerMyself()){
-        if (Raceinfo->timer != 240) {
+    if (Raceinfo->timer > 240 && Raceinfo->timer < 245) {
+        if(!DWC_IsServerMyself()){
             return;
         }
         u8 playerId;
