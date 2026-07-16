@@ -419,6 +419,10 @@ void loadCodes() {
 	// Prevent Shock/POW Drop (by CLF78)
 	directWriteBranch(DropFunc, NoDrop, true);
 
+	// Proper Pokey Respawn (by stealthsteeler)
+	directWrite16(ProperPokeyHook, 0x1);
+	directWrite16(ProperPokeyHook2, 0x1);
+
 	// Red Shell Target Modifier (by CLF78)
 	directWrite8(TargetWhileRespawn, 0x20);
 	directWrite8(TargetWhileHit, 0x18);

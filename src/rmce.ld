@@ -640,6 +640,10 @@ SECTIONS {
 	/* Prevent Shock/POW Drop */
 	DropFunc = 0x807ADBD0;
 
+	/* Proper Pokey Respawn */
+	ProperPokeyHook = 0x80766062;
+	ProperPokeyHook2 = 0x80766182;
+
 	/* Red Shell Target Modifier */
 	TargetWhileRespawn = 0x8058AA72;
 	TargetWhileHit = 0x8058AABF;
