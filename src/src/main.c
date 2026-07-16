@@ -485,7 +485,7 @@ void loadCodes() {
 	directWriteBranch(WoodProb, WoodboxPatch, true);
 
 	// Un-Beancorner (by JoshuaMK)
-	directWriteBranch(UnBeanCornerHook, UnBeanCorner, true);
+	//directWriteBranch(UnBeanCornerHook, UnBeanCorner, true); is broken, might fix in the future
 
 	// Use Items in Cannon (by Ro)
 	directWriteNop(ItemsCannon1);
