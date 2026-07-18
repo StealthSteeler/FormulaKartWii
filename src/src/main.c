@@ -517,6 +517,12 @@ void loadCodes() {
 	directWriteBranch(RockFix2Hook, RockFix2, true);
 	directWriteBranch(GeyserFixHook, GeyserFix, true);
 
+	// Cycle Fix - Rainbow Road (by stealthsteeler)
+	directWriteBranch(AuroraExtensionHook, AuroraExtension, true);
+	directWriteBranch(AuroraExtensionHook2, AuroraExtension2, true);
+	directWriteBranch(AuroraExtensionHook3, AuroraExtension2, true);
+	directWriteBranch(AuroraExtensionHook4, AuroraExtension2, true);
+
 	// Cycle Fix - Toad's Factory (by CLF78 and Ismy)
 	directWriteBranch(ConveyorFixHook, ConveyorFix, true);
 

@@ -224,6 +224,12 @@ SECTIONS {
 	RockFix2Hook = 0x8081758C;
 	GeyserFixHook = 0x806C3194;
 
+	/* Cycle Fixes - Rainbow Road */
+	AuroraExtensionHook = 0x807fa448;
+	AuroraExtensionHook2 = 0x807fa760;
+	AuroraExtensionHook3 = 0x807fa840;
+	AuroraExtensionHook4 = 0x807faa98;
+
 	/* Cycle Fixes - Toad's Factory */
 	ConveyorFixHook = 0x807FCA30;
 
