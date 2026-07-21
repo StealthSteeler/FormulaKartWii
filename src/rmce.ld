@@ -224,6 +224,12 @@ SECTIONS {
 	RockFix2Hook = 0x80805174;
 	GeyserFixHook = 0x806E5814;
 
+	/* Cycle Fixes - Rainbow Road */
+	AuroraExtensionHook = 0x807ee21c;
+	AuroraExtensionHook2 = 0x807ee534;
+	AuroraExtensionHook3 = 0x807ee614;
+	AuroraExtensionHook4 = 0x807ee86c;
+
 	/* Cycle Fixes - Toad's Factory */
 	ConveyorFixHook = 0x807F0804;
 
@@ -639,6 +645,18 @@ SECTIONS {
 
 	/* Prevent Shock/POW Drop */
 	DropFunc = 0x807ADBD0;
+
+	/* Proper Pokey Respawn */
+	ProperPokeyHook = 0x80766062;
+	ProperPokeyHook2 = 0x80766182;
+
+	/* Race Completion Share */
+	VSRaceMemExpansion = 0x8052d782;
+	VSRaceMemExpansionMove = 0x8053974e;
+	VSRaceMemExpansionMove2 = 0x8053975e;
+	VSRaceMemExpansionMove3 = 0x80538f06;
+	RaceCompletionShareHook = 0x80539e60; 
+	VSRaceFinishFunc = 0x80539704;
 
 	/* Red Shell Target Modifier */
 	TargetWhileRespawn = 0x8058AA72;

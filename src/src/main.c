@@ -419,6 +419,17 @@ void loadCodes() {
 	// Prevent Shock/POW Drop (by CLF78)
 	directWriteBranch(DropFunc, NoDrop, true);
 
+	// Proper Pokey Respawn (by stealthsteeler)
+	directWrite16(ProperPokeyHook, 0x1);
+	directWrite16(ProperPokeyHook2, 0x1);
+
+	// Race Completion Share (by stealthsteeler)
+	directWrite16(VSRaceMemExpansion, 0x178);
+	directWrite16(VSRaceMemExpansionMove, 0x174);
+	directWrite16(VSRaceMemExpansionMove2, 0x174);
+	directWrite16(VSRaceMemExpansionMove3, 0x174);
+	directWriteBranch(RaceCompletionShareHook, RaceCompletionShare, true);
+
 	// Red Shell Target Modifier (by CLF78)
 	directWrite8(TargetWhileRespawn, 0x20);
 	directWrite8(TargetWhileHit, 0x18);
@@ -485,7 +496,7 @@ void loadCodes() {
 	directWriteBranch(WoodProb, WoodboxPatch, true);
 
 	// Un-Beancorner (by JoshuaMK)
-	directWriteBranch(UnBeanCornerHook, UnBeanCorner, true);
+	//directWriteBranch(UnBeanCornerHook, UnBeanCorner, true); is broken, might fix in the future
 
 	// Use Items in Cannon (by Ro)
 	directWriteNop(ItemsCannon1);
@@ -512,6 +523,12 @@ void loadCodes() {
 	directWrite16(RockFix, 0x3C0);
 	directWriteBranch(RockFix2Hook, RockFix2, true);
 	directWriteBranch(GeyserFixHook, GeyserFix, true);
+
+	// Cycle Fix - Rainbow Road (by stealthsteeler)
+	directWriteBranch(AuroraExtensionHook, AuroraExtension, true);
+	directWriteBranch(AuroraExtensionHook2, AuroraExtension2, true);
+	directWriteBranch(AuroraExtensionHook3, AuroraExtension2, true);
+	directWriteBranch(AuroraExtensionHook4, AuroraExtension2, true);
 
 	// Cycle Fix - Toad's Factory (by CLF78 and Ismy)
 	directWriteBranch(ConveyorFixHook, ConveyorFix, true);
