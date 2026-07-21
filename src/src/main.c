@@ -423,6 +423,13 @@ void loadCodes() {
 	directWrite16(ProperPokeyHook, 0x1);
 	directWrite16(ProperPokeyHook2, 0x1);
 
+	// Race Completion Share (by stealthsteeler)
+	directWrite16(VSRaceMemExpansion, 0x178);
+	directWrite16(VSRaceMemExpansionMove, 0x174);
+	directWrite16(VSRaceMemExpansionMove2, 0x174);
+	directWrite16(VSRaceMemExpansionMove3, 0x174);
+	directWriteBranch(RaceCompletionShareHook, RaceCompletionShare, true);
+
 	// Red Shell Target Modifier (by CLF78)
 	directWrite8(TargetWhileRespawn, 0x20);
 	directWrite8(TargetWhileHit, 0x18);

@@ -653,6 +653,14 @@ SECTIONS {
 	ProperPokeyHook = 0x8077ab32;
 	ProperPokeyHook2 = 0x8077ac52;
 
+	/* Race Completion Share */
+	VSRaceMemExpansion = 0x805322ca;
+	VSRaceMemExpansionMove = 0x8053ec8a;
+	VSRaceMemExpansionMove2 = 0x8053ec9a;
+	VSRaceMemExpansionMove3 = 0x8053e442;
+	RaceCompletionShareHook = 0x8053f39c; 
+	VSRaceFinishFunc = 0x8053ec40;
+
 	/* Red Shell Target Modifier */
 	TargetWhileRespawn = 0x80591296;
 	TargetWhileHit = 0x805912E3;

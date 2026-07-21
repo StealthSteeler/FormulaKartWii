@@ -35,7 +35,7 @@ typedef struct {
 	u8 position;
 	u8 respawn;
 	u16 battleScore;
-	u16 currentLap;
+	s16 currentLap;
 	u8 maxLap;
 	u8 currentKCP;
 	u8 maxKCP;
