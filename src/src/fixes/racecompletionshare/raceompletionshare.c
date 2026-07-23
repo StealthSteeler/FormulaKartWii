@@ -40,7 +40,7 @@ void RaceCompletionShare(RaceModeOnlineVs *racemode){
                     player->currentLap -= 1;
                     fixTimer[pid] = 0;
                 }
-            } else if (sentRaceCompletion - player->raceCompletion > 0.95) { 
+            } else if (player->raceCompletion - sentRaceCompletion > -0.95) { 
                 if (fixTimer[pid] > gracePeriod) {
                     player->currentLap += 1;
                     fixTimer[pid] = 0;
