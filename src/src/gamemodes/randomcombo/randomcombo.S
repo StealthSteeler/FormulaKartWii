@@ -1,7 +1,7 @@
 .include "asm_setup.S"
 
 .global DriftSelectPageBack, MultiDriftSelectPageBack, ModelRendererFix, ModelRendererFix2, RerollFlagReset
-.extern DriftSelectPageBackOg, RandomCombos, ModelRendererFixHook
+.extern DriftSelectPageBackOg, RandomCombos, ModelRendererFixHook, resetRandomComboPrevVehicles
 
 //Flags here instead of EVA (I dont like it)
 
@@ -110,8 +110,15 @@ end:
 blr
 
 RerollFlagReset:
+#reset reroll
 li r11, 0
 lis r12, RandomComboReroll@ha
 stb r11, RandomComboReroll@l (r12)
+
+#reset excluded vehicles
+bl resetRandomComboPrevVehicles
+
+#restore registers
+mr r3, r29
 li r4, 0x6b
 b RerollFlagResetHook+4
