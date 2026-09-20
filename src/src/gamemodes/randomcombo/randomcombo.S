@@ -1,6 +1,6 @@
 .include "asm_setup.S"
 
-.global DriftSelectPageBack, MultiDriftSelectPageBack, ModelRendererFix, ModelRendererFix2
+.global DriftSelectPageBack, MultiDriftSelectPageBack, ModelRendererFix, ModelRendererFix2, RerollFlagReset
 .extern DriftSelectPageBackOg, RandomCombos, ModelRendererFixHook
 
 //Flags here instead of EVA (I dont like it)
@@ -60,7 +60,7 @@ cmpwi r4, 1
 bne normal
 
 //check if rerolled already
-lis r5, RandomCombosReroll@ha
+lis r5, RandomComboReroll@ha
 lbz r4, RandomComboReroll@l (r5)
 cmpwi r4, 1
 beq end
@@ -89,7 +89,7 @@ cmpwi r12, 1
 bne multinormal
 
 //check if rerolled already
-lis r5, RandomCombosReroll@ha
+lis r5, RandomComboReroll@ha
 lbz r12, RandomComboReroll@l (r6)
 cmpwi r12, 1
 beq end
